@@ -30,15 +30,31 @@ function addHover(el) {
     });
 }
 
-let btn = document.querySelector('button');
+let newGridBtn = document.querySelector('#gridBtn');
+let clearBtn = document.querySelector('#clearBtn');
 
-btn.addEventListener('click', (event) => {
-    //gridSize = prompt("What size blocks?");
+
+newGridBtn.addEventListener('click', (event) => {
+    gridSize = prompt("What size blocks?");
     let container = document.querySelector('.container');
+    
+    //Delete all columns from container div
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-    
+    makeGrid();
 });
+
+clearBtn.addEventListener('click', (event) => {
+    let container = document.querySelector('.container');
+    
+    //Delete all columns from container div
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    makeGrid();
+});
+
+
 
 makeGrid();
