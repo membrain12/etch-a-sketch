@@ -10,6 +10,8 @@ function makeColumn() {
         block.style.width = `${300 / gridSize}px`;
         block.style.height = `${300 / gridSize}px`;
 
+        addHover(block);
+
         column.appendChild(block);
     }
 
@@ -20,6 +22,12 @@ function makeGrid() {
     for (let i = 0; i < gridSize; i++) {
         makeColumn();
     }
+}
+
+function addHover(el) {
+    el.addEventListener('mouseover', (event) => {
+        el.classList.add('hover');
+    });
 }
 
 makeGrid();
