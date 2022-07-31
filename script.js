@@ -16,4 +16,10 @@ function makeColumn() {
     container.appendChild(column);
 }
 
-makeColumn();
+function makeGrid() {
+    for (let i = 0; i < gridSize; i++) {
+        makeColumn();
+    }
+}
+
+makeGrid();
