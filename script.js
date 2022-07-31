@@ -35,7 +35,16 @@ let clearBtn = document.querySelector('#clearBtn');
 
 
 newGridBtn.addEventListener('click', (event) => {
-    gridSize = prompt("What size blocks?");
+    gridSize = prompt("What size blocks? \n (Between 1 and 100)");
+    if (gridSize < 0) {
+        gridSize = 16;
+    }
+    if (gridSize > 100) {
+        gridSize = 100;
+    }
+    if (typeof gridSize != 'number') {
+        gridSize = 16;
+    }
     let container = document.querySelector('.container');
     
     //Delete all columns from container div
