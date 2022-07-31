@@ -34,6 +34,7 @@ let btn = document.querySelector('button');
 
 btn.addEventListener('click', (event) => {
     gridSize = prompt("What size blocks?");
+    let container = document.querySelector('.container');
     container.remove();
     
 });
