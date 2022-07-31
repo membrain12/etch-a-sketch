@@ -33,9 +33,11 @@ function addHover(el) {
 let btn = document.querySelector('button');
 
 btn.addEventListener('click', (event) => {
-    gridSize = prompt("What size blocks?");
+    //gridSize = prompt("What size blocks?");
     let container = document.querySelector('.container');
-    container.remove();
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
     
 });
 
